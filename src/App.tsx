@@ -1,7 +1,12 @@
-import {MapInteractionCSS} from 'react-map-interaction'
+import { MapInteractionCSS } from 'react-map-interaction'
 import map from './assets/map.webp'
+import data from './assets/data.json'
+import { useState } from 'react'
 
 export default function App() {
+    const [layer, setLayer] = useState('1')
+    const [selected, setSelected] = useState<string | null>(null)
+
     return (
         <div className='w-screen h-screen'>
             <div className='absolute bottom-0 w-full lg:w-96 xl:w-[32rem] p-5 z-20'>
@@ -30,7 +35,7 @@ export default function App() {
             </div>
 
             <MapInteractionCSS
-                minScale={0.5}
+                minScale={0.3}
                 maxScale={3}
                 showControls={true}
                 translationBounds={{
@@ -39,7 +44,20 @@ export default function App() {
                     yMin: -800,
                     yMax: 800
                 }}>
-                <img src={map} alt='Map'/>
+                <div className='relative' style={{ width: '2361px', height: '2381px', backgroundImage: `url(${map})` }}>
+                    {Object.entries(data.points).map(([key, value]) =>
+                        <button onClick={() => {
+                            if (key === selected) {
+                                setSelected(null)
+                            } else {
+                                setSelected(key)
+                            }
+                        }}
+                            className={`absolute z-20 rounded-full w-16 h-16 border-8 border-gray-50 border-solid bg-blue-400 ${selected === key ? 'shadow' : 'shadow-xl'}`} style={{ left: value.x + 'px', top: value.y + 'px' }} key={key}>
+                            <p className='w-0 h-0 overflow-hidden'>{value.name}</p>
+                        </button>)
+                    }
+                </div>
             </MapInteractionCSS>
         </div>
     )
