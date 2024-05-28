@@ -17,10 +17,10 @@ export default function App() {
             <div className='w-screen h-screen'>
                 <div className='absolute top-0 p-5 z-20'>
                     <div className='shadow-lg bg-white rounded-3xl p-3'>
-                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 blck' onClick={() => setLayer('1')}>F1</button>
-                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block' onClick={() => setLayer('2')}>F2</button>
-                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block' onClick={() => setLayer('3')}>F3</button>
-                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 block' onClick={() => setLayer('4')}>F4</button>
+                        <button className={`rounded-full ${layer === '1' ? 'bg-gray-100' : ''} hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block`} onClick={() => setLayer('1')}>F1</button>
+                        <button className={`rounded-full ${layer === '2' ? 'bg-gray-100' : ''} hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block`} onClick={() => setLayer('2')}>F2</button>
+                        <button className={`rounded-full ${layer === '3' ? 'bg-gray-100' : ''} hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block`} onClick={() => setLayer('3')}>F3</button>
+                        <button className={`rounded-full ${layer === '4' ? 'bg-gray-100' : ''} hover:bg-gray-100 transition-colors duration-100 p-3 block`} onClick={() => setLayer('4')}>F4</button>
                     </div>
                 </div>
 
