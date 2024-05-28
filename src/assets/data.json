@@ -11,27 +11,11 @@
             "y": 640,
             "layer": "1",
             "name": "1st Floor Lobby",
-            "decibel": [
-                38,
-                40,
-                44
-            ],
-            "connectivity": [
-                3,
-                3
-            ],
-            "chairs": [
-                16,
-                16
-            ],
-            "tables": [
-                3,
-                3
-            ],
-            "power": [
-                3,
-                3
-            ],
+            "decibel": 42,
+            "connectivity": 3,
+            "chairs": 16,
+            "tables": 3,
+            "power": 3,
             "notes": "Occassional activities."
         },
         "2": {
@@ -39,81 +23,35 @@
             "y": 846,
             "layer": "1",
             "name": "Central Outdoors Area",
-            "decibel": [
-                56,
-                57
-            ],
-            "connectivity": [
-                2,
-                3
-            ],
-            "chairs": [
-                7,
-                8
-            ],
-            "tables": [
-                1,
-                1
-            ],
-            "power": [
-                0,
-                0
-            ],
+            "decibel": 56,
+            "connectivity": 3,
+            "chairs": 8,
+            "tables": 1,
+            "power": 0,
             "notes": "Mosquitos warning!"
         },
         "3": {
             "x": 1062,
             "y": 1290,
-            "layer": 1,
+            "layer": "1",
             "name": "Outdoors Area",
-            "decibel": [
-                65,
-                53,
-                57
-            ],
-            "connectivity": [
-                2,
-                3,
-                2,
-                3
-            ],
-            "chairs": [
-                8,
-                14
-            ],
-            "tables": [
-                2,
-                2
-            ],
-            "power": [
-                0
-            ],
+            "decibel": 60,
+            "connectivity": 2,
+            "chairs": 10,
+            "tables": 2,
+            "power": 0,
             "notes": "Mosquitos warning!"
         },
         "4": {
             "x": 1569,
             "y": 579,
-            "layer": 1,
+            "layer": "1",
             "name": "Assembly Hall",
-            "decibel": [
-                42,
-                60
-            ],
-            "connectivity": [
-                3,
-                3
-            ],
-            "chairs": [
-                60,
-                60
-            ],
-            "tables": [
-                30,
-                30
-            ],
-            "power": [
-                2
-            ],
+            "decibel": 52,
+            "connectivity": 3,
+            "chairs": 60,
+            "tables": 30,
+            "power": 2,
             "notes": "The power outlets are unusable. Sometimes there are meetings."
         }
     }
