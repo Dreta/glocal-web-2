@@ -1,17 +1,29 @@
 import { MapInteractionCSS } from 'react-map-interaction'
 import map from './assets/map.webp'
+import layer2 from './assets/layer2.webp'
+import layer3 from './assets/layer3.webp'
+import layer4 from './assets/layer4.webp'
 import data from './assets/data.json'
 import { useState } from 'react'
 import SelectedModal from './SelectedModal'
 
 export default function App() {
-    const [layer, setLayer] = useState('1')
+    const [layer, setLayer] = useState('4')
     const [selected, setSelected] = useState<string | null>(null)
 
     return (
-        <div>
+        <div style={{ backgroundColor: layer === '1' ? 'white' : '#a9a9a9' }}>
             <SelectedModal value={selected ? data.points[selected] : null} close={() => setSelected(null)} />
             <div className='w-screen h-screen'>
+                <div className='absolute top-0 p-5 z-20'>
+                    <div className='shadow-lg bg-white rounded-3xl p-3'>
+                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 blck' onClick={() => setLayer('1')}>F1</button>
+                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block' onClick={() => setLayer('2')}>F2</button>
+                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 mb-1 block' onClick={() => setLayer('3')}>F3</button>
+                        <button className='rounded-full hover:bg-gray-100 transition-colors duration-100 p-3 block' onClick={() => setLayer('4')}>F4</button>
+                    </div>
+                </div>
+
                 <div className='absolute bottom-0 w-full lg:w-96 xl:w-[32rem] p-5 z-20'>
                     <div className='shadow-lg bg-white rounded-3xl p-5'>
                         <h1 className='font-bold text-2xl mb-1'>The Quiet Compass</h1>
@@ -47,7 +59,14 @@ export default function App() {
                         yMin: -800,
                         yMax: 800
                     }}>
-                    <div className='relative' style={{ width: '2361px', height: '2381px', backgroundImage: `url(${map})` }}>
+                    <div className='relative' style={{
+                        width: '2361px', height: '2381px', backgroundImage: `url(${{
+                            '1': map,
+                            '2': layer2,
+                            '3': layer3,
+                            '4': layer4
+                        }[layer]})`
+                    }}>
                         {Object.entries(data.points).map(([key, value]) => {
                             if (layer !== value.layer) {
                                 return;

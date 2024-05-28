@@ -53,6 +53,30 @@
             "tables": 30,
             "power": 2,
             "notes": "The power outlets are unusable. Sometimes there are meetings."
+        },
+        "5": {
+            "x": 588,
+            "y": 924,
+            "layer": "3",
+            "name": "Study Room",
+            "decibel": 34,
+            "connectivity": 3,
+            "chairs": 23,
+            "tables": 15,
+            "power": 3,
+            "notes": "Classes sometimes."
+        },
+        "6": {
+            "x": 576,
+            "y": 885,
+            "layer": "4",
+            "name": "Study Room",
+            "decibel": 39,
+            "connectivity": 3,
+            "chairs": 10,
+            "tables": 5,
+            "power": 2,
+            "notes": ""
         }
     }
 }
