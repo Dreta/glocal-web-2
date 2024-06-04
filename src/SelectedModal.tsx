@@ -94,7 +94,8 @@ export default function SelectedModal({ value, close }: { value: object, close: 
                 <FontAwesomeIcon icon={faPlug} className={`mr-2 w-5 ${powerColor}`} />
                 <p>{value.power > 0 ? `${value.power} ${value.power > 1 ? 'Power Outlets' : 'Power Outlet'}` : 'Power Unavailable'}</p>
             </div>
-            <p>{value.notes ? `Notes: ${value.notes}` : ''}</p>
+            <p className='mb-5'>{value.notes ? `Notes: ${value.notes}` : ''}</p>
+            <img src={value.image} alt={value.name} className='w-full rounded-xl' />
         </div>
     </div >
 }
