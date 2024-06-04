@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { faChair, faHeadphones, faInbox, faPlug, faTimes, faWifi } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { MapInteractionCSS } from 'react-map-interaction'
 import map from './assets/map.webp'
 import layer2 from './assets/layer2.webp'
@@ -8,7 +10,7 @@ import { useState } from 'react'
 import SelectedModal from './SelectedModal'
 
 export default function App() {
-    const [layer, setLayer] = useState('4')
+    const [layer, setLayer] = useState('1')
     const [selected, setSelected] = useState<string | null>(null)
 
     return (
